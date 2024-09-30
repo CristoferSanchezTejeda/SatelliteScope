@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SatelliteScope</title>
+    <style>
+      body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+      }
+
+      .modal {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5); 
+        z-index: 1000;
+      }
+
+      .modal-content {
+        background-color: white;
+        padding: 20px;
+        border-radius: 8px;
+        max-width: 600px;
+        text-align: center;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      }
+
+      .modal-content h1 {
+        margin-bottom: 15px;
+        font-size: 24px;
+      }
+
+      .modal-content p {
+        font-size: 16px;
+        margin-bottom: 10px;
+      }
+
+      .modal-content a {
+        color: #4caf50;
+        text-decoration: none;
+      }
+
+      .close-btn {
+        margin-top: 20px;
+        padding: 10px 20px;
+        background-color: #4caf50;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+
+      .close-btn:hover {
+        background-color: #45a049;
+      }
+    </style>
+    <script type="importmap">
+      {
+        "imports": {
+          "three": "https://cdn.jsdelivr.net/npm/three@0.161/build/three.module.js",
+          "jsm/": "https://cdn.jsdelivr.net/npm/three@0.161/examples/jsm/"
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <div class="modal" id="welcome-modal">
+      <div class="modal-content">
+        <h1>Welcome to SatelliteScope</h1>
+        <p>
+          My name is Cristofer Sanchez Tejeda, and SatelliteScope is a platform that visualizes satellite movements and patterns on a 3D map. While it currently features a limited number of satellites and functionalities, many more satellites and features will be added soon!
+        </p>
+        <p>
+          As this is a one-person project, and I’m 16 with a life outside of my computer, updates may take some time. You may encounter occasional glitches, but rest assured they will be addressed as the project evolves. If you encounter any issues, please <a href="https://forms.gle/wWdfV3t1FULQPHWT9" target="_blank">click here to report them</a> using this Google form. Your patience and support are greatly appreciated, and I’m excited to continue expanding SatelliteScope with new and exciting capabilities in the future!
+        </p>
+        <p>
+          Feel free to connect with me on <a href="https://www.linkedin.com/in/cristofer-sanchez-tejeda-209766312/" target="_blank">LinkedIn</a> or reach out via email at <a href="mailto:sancheztejeda141@gmail.com">sancheztejeda141@gmail.com</a>.
+        </p>
+        (This is the early stage of SatelliteScope)
+      </p>
+    </p>
+        <button class="close-btn" onclick="closeWelcomeModal()">Got it!</button>
+      </div>
+    </div>
+
+    <div class="modal" id="loading-modal" style="display: none;">
+      <div class="modal-content">
+        <h1>Loading Models</h1>
+        <p>Please wait a moment while the models are loading.</p>
+      </div>
+    </div>
+
+    <script type="module" src="index.js"></script>
+
+    <script>
+      
+      function closeWelcomeModal() {
+        document.getElementById('welcome-modal').style.display = 'none';
+      }
+
+
+      function showLoadingModal() {
+        document.getElementById('loading-modal').style.display = 'flex';
+      }
+
+      
+      function hideLoadingModal() {
+        document.getElementById('loading-modal').style.display = 'none';
+      }
+
+      
+      function loadModels() {
+        showLoadingModal();
+        
+        setTimeout(() => {
+        
+          hideLoadingModal(); 
+        }, 3000); 
+      }
+
+      loadModels();
+    </script>
+  </body>
+</html>
