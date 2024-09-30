@@ -14,7 +14,8 @@ Satellite Name Tags: Satellites are labeled with custom tags (e.g., Jason 3), ma
 
 and more....
 
-Usage-
+Usage
+
 Navigating the 3D Space: Use your mouse or keyboard controls to explore the 3D space and observe satellite orbits.
 
 Tracking Satellites: Click on satellites like Jason 3 to see their orbit paths and access detailed satellite information.
