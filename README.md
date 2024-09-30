@@ -24,9 +24,11 @@ Orbit Path: Satellites have interactive lines that trace their movement around E
 
 Modals and Interactions: Information about each satellite is available in modals that pop up when you click on a satellite. Close the modal using the button provided.
 
+
 Report Issues:
 
 https://forms.gle/y15DKVJZ9jpj42eu8
+
 
 Contact
 
