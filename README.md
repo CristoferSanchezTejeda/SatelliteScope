@@ -31,7 +31,7 @@ Report Issues:
 https://forms.gle/nxer6vmaRBiRyCmV6
 
 
-Contact
+Contact Information
 
 Email: sancheztejeda141@gmail.com
 
